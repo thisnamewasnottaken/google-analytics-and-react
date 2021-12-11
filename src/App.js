@@ -1,5 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-215064440-1');
+ReactGA.pageview('test-init-pageview');
+
 
 function App() {
   return (
