@@ -10,20 +10,16 @@ import { Component } from "react";
 
 class App extends Component {
 
-  initReactGA = () => {
-    ReactGA.initialize('UA-215064440-1');
-    ReactGA.pageview('test-init-pageview');
-  };
-
   componentDidMount(){
-    this.initReactGA();
+    ReactGA.initialize(`UA-215064440-1`);
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
   render() {
     return (
       <div className="App container">
         <img src={logo} alt="logo" />
-        <h2>Testing Out GA For Funzies</h2>
+        <h2>Herewegoagain</h2>
       </div>
     );
   }
