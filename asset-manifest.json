@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/google-analytics-and-react/static/css/main.a617e044.chunk.css",
+    "main.js": "/google-analytics-and-react/static/js/main.69162d24.chunk.js",
+    "main.js.map": "/google-analytics-and-react/static/js/main.69162d24.chunk.js.map",
+    "runtime-main.js": "/google-analytics-and-react/static/js/runtime-main.e8aa6031.js",
+    "runtime-main.js.map": "/google-analytics-and-react/static/js/runtime-main.e8aa6031.js.map",
+    "static/js/2.6f002872.chunk.js": "/google-analytics-and-react/static/js/2.6f002872.chunk.js",
+    "static/js/2.6f002872.chunk.js.map": "/google-analytics-and-react/static/js/2.6f002872.chunk.js.map",
+    "static/js/3.d0a710f2.chunk.js": "/google-analytics-and-react/static/js/3.d0a710f2.chunk.js",
+    "static/js/3.d0a710f2.chunk.js.map": "/google-analytics-and-react/static/js/3.d0a710f2.chunk.js.map",
+    "index.html": "/google-analytics-and-react/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/google-analytics-and-react/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.6f002872.chunk.js.LICENSE.txt": "/google-analytics-and-react/static/js/2.6f002872.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/google-analytics-and-react/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e8aa6031.js",
+    "static/js/2.6f002872.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.69162d24.chunk.js"
+  ]
+}
