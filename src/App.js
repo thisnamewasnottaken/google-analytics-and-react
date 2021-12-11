@@ -1,23 +1,31 @@
-//import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
 import ReactGA from 'react-ga';
-import React,{useEffect} from "react";
+import { Component } from "react";
 
 //ReactGA.initialize('UA-215064440-1');
 //ReactGA.pageview('test-init-pageview');
 
 
 
-export default function App() {
+class App extends Component {
 
-  useEffect(() => {
+  initReactGA = () => {
     ReactGA.initialize('UA-215064440-1');
-    ReactGA.pageview(window.location.pathname);
-  })
+    ReactGA.pageview('test-init-pageview');
+  };
 
-  return (
-    <div className="App">
-      <h1>GRMFPF</h1>
-    </div>
-  );
+  componentDidMount(){
+    this.initReactGA();
+  }
+
+  render() {
+    return (
+      <div className="App container">
+        <img src={logo} alt="logo" />
+        <h2>Testing Out GA For Funzies</h2>
+      </div>
+    );
+  }
 }
+export default App;
