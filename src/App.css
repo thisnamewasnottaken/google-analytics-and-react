@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+
+.App-console {
+  background-color: '#242424';
+  text-align: left;
+}
