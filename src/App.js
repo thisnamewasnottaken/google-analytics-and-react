@@ -11,7 +11,10 @@ import { Component } from "react";
 class App extends Component {
 
   initReactGA = () => {
-    ReactGA.initialize('UA-215064440-1');
+    ReactGA.initialize('UA-215064440-1',
+    {
+      debug: true,
+    });
     ReactGA.pageview('test-init-pageview');
   };
 
