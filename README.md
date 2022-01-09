@@ -1,4 +1,6 @@
-# React and Google Analytics
+# [React and Google Analytics](https://thisnamewasnottaken.github.io/google-analytics-and-react/)
+[![pages-build-deployment](https://github.com/thisnamewasnottaken/google-analytics-and-react/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/thisnamewasnottaken/google-analytics-and-react/actions/workflows/pages/pages-build-deployment)
+[![CodeQL](https://github.com/thisnamewasnottaken/google-analytics-and-react/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/thisnamewasnottaken/google-analytics-and-react/actions/workflows/codeql-analysis.yml)
 
 ## Background
 This project is a workthrough of various tutorials to get basic elements of Google Analytics to work with a simple Create-React-App webapp.

@@ -1,9 +1,22 @@
 .App {
   text-align: center;
+  background-color: rgb(43, 42, 51);
+  color: rgba(251, 251, 254, 1);
+  
+}
+
+
+a:visited {
+  color: #03cfef;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -26,6 +39,7 @@
 
 .App-link {
   color: #61dafb;
+  
 }
 
 @keyframes App-logo-spin {
@@ -40,4 +54,12 @@
 .App-console {
   background-color: '#242424';
   text-align: left;
+  align-self: center;
+  margin-bottom: 3rem;
+  margin-right: 10rem;
+  margin-left: 10rem;
+}
+
+List-div {
+  text-align: left
 }

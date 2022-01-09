@@ -55,12 +55,24 @@ function App() {
     <div className="App container">
       <img className="App-logo" src={logo} alt="logo" />
       <h1>Google Analytics Toy</h1>
-      <p>Basic Toy to try out Google Analytics with React</p>
-      <p>Based on mostly boiler code from a number of sources:</p>
-      <p><a href="https://www.npmjs.com/package/react-ga" target="_blank" rel="noreferrer">react-ga NodeJS Library</a></p>
-      <p><a href="https://www.npmjs.com/package/web-vitals" target="_blank" rel="noreferrer">web-vitals NodeJS Library</a></p>
-      <p><a href="https://www.npmjs.com/package/console-feed" target="_blank" rel="noreferrer">console-feed NodeJS library</a></p>
-      <p><a href="https://dev.to/ramonak/react-enable-google-analytics-after-a-user-grants-consent-5bg3" target="_blank" rel="noreferrer">Google Analytics with Cookie Consent Blog by Kate Lupachova</a></p>
+      <p style={{textAlign: 'center'}} >Basic Toy to try out Google Analytics with React. Based on mostly boiler code from a number of sources.</p>
+      <p>This includes basic Universal Analytics and Web Vitals reported to Google Analytics</p>
+      <p>Imporant to note, Create-React-App (which is used here) includes a reportWebVitals.js file by default.</p>
+      <div className="List-div">
+      <h2>References</h2>
+      <ul textAlign="left">
+        <a>Node Libraries</a>
+        <li><a href="https://www.npmjs.com/package/react-ga" target="_blank" rel="noreferrer">react-ga by react-ga</a></li>
+        <li><a href="https://www.npmjs.com/package/web-vitals" target="_blank" rel="noreferrer">web-vitals by GoogleChrome</a></li>
+        <li><a href="https://www.npmjs.com/package/console-feed" target="_blank" rel="noreferrer">console-feed by samdenty</a></li>
+        <a>Blog</a>
+        <li><a href="https://dev.to/ramonak/react-enable-google-analytics-after-a-user-grants-consent-5bg3" target="_blank" rel="noreferrer">Blog by Kate Lupachova</a></li>
+      </ul>
+      </div>
+      <h2>Badges</h2>
+        <img src="https://github.com/thisnamewasnottaken/google-analytics-and-react/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages" alt="SVG as an image"/><a> </a>
+        <img src="https://github.com/thisnamewasnottaken/google-analytics-and-react/actions/workflows/codeql-analysis.yml/badge.svg" alt="SVG as an image"/>
+      <h2>From the console...</h2>
       <div className="App-console" style={{ backgroundColor: '#242424' }}>
         <Console logs={logs} variant="dark" />
       </div>
