@@ -10,7 +10,7 @@ import React, { useState, useEffect } from "react";
 import reportWebVitals from './reportWebVitals';
 import { Console,Hook, Unhook } from 'console-feed'
 import CookieConsent, { Cookies, getCookieConsentValue } from "react-cookie-consent";
-import {initGA, GAPageView} from "./utilities/ga-utils"
+import {initGA, GAPageView,sendToGoogleAnalytics} from "./utilities/ga-utils"
 
 reportWebVitals(console.log);
 function App() {
@@ -22,7 +22,6 @@ function App() {
     if (process.env.REACT_APP_GOOGLE_ANALYTICS_UA_ID) {
       initGA(process.env.REACT_APP_GOOGLE_ANALYTICS_UA_ID);
     }
-    reportWebVitals(console.log);
   };
 
   const handleDeclineCookie = () => {
@@ -47,8 +46,10 @@ function App() {
       handleAcceptCookie();
       console.log("Triggering ReactGA PageView");
       GAPageView("google-analytics-and-react/");
+      reportWebVitals(sendToGoogleAnalytics);
     };
     return () => Unhook(window.console);
+    
   }, []);
 
 
@@ -67,7 +68,7 @@ function App() {
       </div>
       <CookieConsent
         onAccept={handleAcceptCookie}
-        debug={true} //Uncomment during development.
+        //debug={true} //Uncomment during development.
         enableDeclineButton
         declineButtonText="Decline Optional Cookies"
         onDecline={handleDeclineCookie}          
