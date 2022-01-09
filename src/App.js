@@ -54,7 +54,7 @@ function App() {
   return (            
     <div className="App container">
       <img className="App-logo" src={logo} alt="logo" />
-      <h1>Google Analytics Toy</h1>
+      <h1><a href="https://thisnamewasnottaken.github.io/google-analytics-and-react/">Google Analytics Toy</a></h1>
       <p style={{textAlign: 'center'}} >Basic Toy to try out Google Analytics with React. Based on mostly boiler code from a number of sources.</p>
       <p>This includes basic Universal Analytics and Web Vitals reported to Google Analytics</p>
       <p>Imporant to note, Create-React-App (which is used here) includes a reportWebVitals.js file by default.</p>
