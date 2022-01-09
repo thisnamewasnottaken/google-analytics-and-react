@@ -1,6 +1,4 @@
 // TODO
-// Figure out whether webvitals are working
-// Check if the initial vs subsequent rendering is good (disable debug in cookie consent to test).
 // Write unit test cases.
 
 
