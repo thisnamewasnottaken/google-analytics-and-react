@@ -62,17 +62,17 @@ function App() {
       <div className="List-div">
       <h2>References</h2>
       <ul textAlign="left">
-        <a>Node Libraries</a>
+        <p>Node Libraries</p>
         <li><a href="https://www.npmjs.com/package/react-ga" target="_blank" rel="noreferrer">react-ga by react-ga</a></li>
         <li><a href="https://www.npmjs.com/package/web-vitals" target="_blank" rel="noreferrer">web-vitals by GoogleChrome</a></li>
         <li><a href="https://www.npmjs.com/package/console-feed" target="_blank" rel="noreferrer">console-feed by samdenty</a></li>
-        <a>Blog</a>
+        <p>Blog</p>
         <li><a href="https://dev.to/ramonak/react-enable-google-analytics-after-a-user-grants-consent-5bg3" target="_blank" rel="noreferrer">Blog by Kate Lupachova</a></li>
       </ul>
       </div>
       <h2>Badges</h2>
-        <img src="https://github.com/thisnamewasnottaken/google-analytics-and-react/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages" alt="SVG as an image"/><a> </a>
-        <img src="https://github.com/thisnamewasnottaken/google-analytics-and-react/actions/workflows/codeql-analysis.yml/badge.svg" alt="SVG as an image"/>
+        <img src="https://github.com/thisnamewasnottaken/google-analytics-and-react/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages" alt="Github Pages Workflow Status badge"/>
+        <img src="https://github.com/thisnamewasnottaken/google-analytics-and-react/actions/workflows/codeql-analysis.yml/badge.svg" alt="Github CodeQL Status badge"/>
       <h2>From the console...</h2>
       <div className="App-console" style={{ backgroundColor: '#242424' }}>
         <Console logs={logs} variant="dark" />
