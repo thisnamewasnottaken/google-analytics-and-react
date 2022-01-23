@@ -1,7 +1,8 @@
 .App {
   text-align: center;
-  background-color: rgb(43, 42, 51);
-  color: rgba(251, 251, 254, 1);
+  background-color: #2b2a33;
+  color: rgb(254, 252, 251);
+  height: 100%;
   
 }
 
@@ -27,6 +28,17 @@ a:hover {
 }
 
 .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-footer {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
