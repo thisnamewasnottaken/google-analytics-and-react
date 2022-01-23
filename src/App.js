@@ -9,7 +9,9 @@ import reportWebVitals from './reportWebVitals';
 import { Console,Hook, Unhook } from 'console-feed';
 import CookieConsent, { Cookies, getCookieConsentValue } from "react-cookie-consent";
 import {initGA, GAPageView,sendToGoogleAnalytics} from "./utilities/ga-utils";
+// eslint-disable-next-line
 import { Routes, Route, Link, useParams, Outlet } from "react-router-dom";
+// eslint-disable-next-line
 import {Nav, Navbar, NavDropdown, Container, Form, FormControl, Button} from "react-bootstrap"
 
 reportWebVitals(console.log);
@@ -21,7 +23,7 @@ const handleAcceptCookie = () => {
     initGA(process.env.REACT_APP_GOOGLE_ANALYTICS_UA_ID);
   }
 };
-
+// eslint-disable-next-line
 const handleDeclineCookie = () => {
   // Remove Google Analytics Cookies on decline
   Cookies.remove("_ga");
@@ -103,6 +105,7 @@ function ReferencesComponent() {
 }
 
 function App() {
+  // eslint-disable-next-line
   const [logs, setLogs] = useState([])
 
   const handleAcceptCookie = () => {
