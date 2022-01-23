@@ -1,9 +1,19 @@
+/* html {
+  min-height: 100%; 
+
+  display: flex;
+  flex-direction: column;
+} */
+
+
+body > #root > div {
+  height: 100vh;
+}
+
 .App {
   text-align: center;
   background-color: #2b2a33;
   color: rgb(254, 252, 251);
-  height: 100%;
-  
 }
 
 
@@ -40,7 +50,6 @@ a:hover {
 
 .App-footer {
   background-color: #2b2a33;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;

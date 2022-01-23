@@ -1,6 +1,6 @@
 // TODO
 // Write unit test cases.
-// Fix home page routing...
+// Fix logging to work from root and pass to logger component
 
 
 import logo from './logo.svg';
@@ -173,9 +173,9 @@ function App() {
         declineButtonText="Decline Optional Cookies"
         onDecline={handleDeclineCookie}          
       >This website uses cookies to enhance the user experience.</CookieConsent>
-      <footer className='App-footer'>
-        Nothing
-      </footer>
+      {/* <footer className='App-footer'>
+        <p>This is a footer...</p>
+      </footer> */}
     </div>
   );
 }
