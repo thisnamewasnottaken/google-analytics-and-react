@@ -3,6 +3,7 @@
 // Fix logging to work from root and pass to logger component
 
 import "./App.css";
+import bootstrap from "bootstrap";
 import React, { useState, useEffect } from "react";
 //import reportWebVitals from "./reportWebVitals";
 import { Console, Hook, Unhook } from "console-feed";
@@ -187,7 +188,7 @@ function App() {
           alt="Google Lighthouse Logo"
         />
         <img
-          className="App-logo"
+          //className="App-logo"
           src={process.env.PUBLIC_URL + "/Assets/github-icon.svg"}
           alt="Github Logo"
         />
