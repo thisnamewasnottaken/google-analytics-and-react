@@ -97,27 +97,9 @@ function ReferencesComponent() {
   console.log(`Reference Component is Selected`);
   return (
     <div>
-      <p style={{ textAlign: "center" }}>
-        Basic Toy to try out Google Analytics with React. Based on mostly boiler
-        code from a number of sources.
-      </p>
-      <p>
-        This includes basic Universal Analytics and Web Vitals reported to
-        Google Analytics
-      </p>
-      <p>
-        Imporant to note, Create-React-App (which is used here) includes a
-        reportWebVitals.js file by default.
-      </p>
-      <p>
-        See the code here:{" "}
-        <a href="https://github.com/thisnamewasnottaken/google-analytics-and-react">
-          https://github.com/thisnamewasnottaken/google-analytics-and-react
-        </a>
-      </p>
+      <h2>References</h2>
       <div className="List-div">
-        <h2>References</h2>
-        <ul textAlign="left">
+        <ul textalign="left">
           <p>Node Libraries</p>
           <li>
             <a
