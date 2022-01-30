@@ -25,12 +25,12 @@ a:hover {
 }
 
 .App-logo {
-  height: 10vmin;
+  height: 4rem;
   pointer-events: none;
 }
 
 .App-logo-spin {
-  height: 10vmin;
+  height: 4rem;
   pointer-events: none;
 }
 
@@ -56,9 +56,10 @@ a:hover {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  padding-top: 4vmin;
+  padding-top: 3px + 2vmin;
   justify-content: center;
-  gap: 6vmin;
+  gap: 3px + 2vmin;
+  flex-wrap: wrap;
 }
 
 .App-footer {

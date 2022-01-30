@@ -65,7 +65,7 @@ function HomeComponent() {
         />
       </div>
 
-      <p style={{ textAlign: "center" }}>
+      <p style={{ textalign: "center" }}>
         Basic Toy to try out Google Analytics with React. Based on mostly boiler
         code from a number of sources.
       </p>
@@ -79,7 +79,11 @@ function HomeComponent() {
       </p>
       <p>
         Source code at:{" "}
-        <a href="https://github.com/thisnamewasnottaken/google-analytics-and-react">
+        <a
+          href="https://github.com/thisnamewasnottaken/google-analytics-and-react"
+          target="_blank"
+          rel="noreferrer"
+        >
           github {">"} thisnamewasnottaken {">"} google-analytics-and-react
         </a>
       </p>
@@ -207,11 +211,7 @@ function App() {
         />
       </div>
 
-      <h1>
-        <a href="https://thisnamewasnottaken.github.io/google-analytics-and-react/">
-          Google Analytics and React Toy
-        </a>
-      </h1>
+      <h1>Google Analytics and React Toy</h1>
       <nav style={{ padding: "1rem 0" }}>
         <Link to="/google-analytics-and-react/home">Home</Link> | {""}
         <Link to="/google-analytics-and-react/logs">Logs</Link> | {""}
