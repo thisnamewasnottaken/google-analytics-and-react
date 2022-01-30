@@ -192,10 +192,7 @@ function App() {
         <Link to="/google-analytics-and-react/references">References</Link>
       </nav>
       <Routes>
-        <Route
-          path="/"
-          element={<HomeComponent />}
-        ></Route>
+        <Route path="/" element={<HomeComponent />}></Route>
         <Route
           path="/google-analytics-and-react"
           element={<HomeComponent />}
