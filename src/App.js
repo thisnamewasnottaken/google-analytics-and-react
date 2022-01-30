@@ -80,7 +80,7 @@ function HomeComponent() {
       <p>
         Source code at:{" "}
         <a href="https://github.com/thisnamewasnottaken/google-analytics-and-react">
-          github > thisnamewasnottaken > google-analytics-and-react
+          github {">"} thisnamewasnottaken {">"} google-analytics-and-react
         </a>
       </p>
     </div>
