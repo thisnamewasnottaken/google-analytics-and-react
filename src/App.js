@@ -1,57 +1,70 @@
 // TODO
 // Write unit test cases.
-// Fix logging to work from root and pass to logger component
 
 import "./App.css";
-import React, { useState, useEffect } from "react";
-//import reportWebVitals from "./reportWebVitals";
-import { Console, Hook, Unhook } from "console-feed";
+import React, { useEffect } from "react";
+import reportWebVitals from "./reportWebVitals";
+import ReactGA from "react-ga";
 import CookieConsent, {
   Cookies,
   getCookieConsentValue,
 } from "react-cookie-consent";
-import { initGA } from "./utilities/ga-utils";
+import { initGA, pageViewGA } from "./utilities/ga-utils";
 import { Routes, Route, Link } from "react-router-dom";
 
 const handleAcceptCookie = () => {
   //Trigger Google Universal Analytics on Cookie Accept if set
   console.log("handleAcceptCookie triggered");
   initGA();
+  // const page = window.location.pathname;
+  // console.log(`handlePageView for ` + page);
+  // pageViewGA(page);
+  // reportWebVitals(({ id, name, value }) =>
+  //   ReactGA.event({
+  //     action: name,
+  //     category: "Web Vitals",
+  //     label: id,
+  //     nonInteraction: true,
+  //     value: Math.round(name === "CLS" ? value * 1000 : value),
+  //   })
+  // );
 };
 
 const handleDeclineCookie = () => {
   // Remove Google Analytics Cookies on decline
+  console.log("handleDeclineCookie");
   Cookies.remove("_ga");
   Cookies.remove("_gat");
   Cookies.remove("_gid");
 };
 
-// Body for the /logs page
-// Uses a console-feed component
-function LogComponents() {
-  const [logs, setLogs] = useState([]);
-  console.log(`Log Component is Selected`);
-  useEffect(() => {
-    Hook(
-      window.console,
-      (log) => setLogs((currLogs) => [...currLogs, log]),
-      false
+// Handles pageview reporting
+const handlePageView = () => {
+  const isConsent = getCookieConsentValue() ?? false;
+  if (isConsent === false) {
+    handleDeclineCookie();
+  } else {
+    const page = window.location.pathname;
+    console.log(`handlePageView for ` + page);
+    pageViewGA(page);
+    reportWebVitals(({ id, name, value }) =>
+      ReactGA.event({
+        action: name,
+        category: "Web Vitals",
+        label: id,
+        nonInteraction: true,
+        value: Math.round(name === "CLS" ? value * 1000 : value),
+      })
     );
-    return () => Unhook(window.console);
-  }, []);
-
-  return (
-    <div className="App-Console" style={{ backgroundColor: "#242424" }}>
-      <h2>From the console...</h2>
-      <Console logs={logs} variant="dark" />
-    </div>
-  );
-}
+  }
+};
 
 // Main body for the app
 // Featured at `/` and `/home`
 function HomeComponent() {
   console.log(`Home Component is Rendering`);
+  handlePageView();
+
   return (
     <div className="AppContainer">
       <div className="App-header-logo-box">
@@ -95,6 +108,7 @@ function HomeComponent() {
 // Uses a console-feed component
 function ReferencesComponent() {
   console.log(`Reference Component is Selected`);
+  handlePageView();
   return (
     <div>
       <h2>References</h2>
@@ -167,19 +181,21 @@ function LogoBox() {
 
 function App() {
   const startupactions = () => {
-    console.log(`Hello world!`);
     console.log(
-      `The analytics ID to use is ` +
-        process.env.REACT_APP_GOOGLE_ANALYTICS_UA_ID
+      `startUpActions: The analytics ID to use is ` +
+        process.env.REACT_APP_GOOGLE_ANALYTICS_UA_ID +
+        `Checking if consent was already passed.`
     );
-    console.log(`Checking if consent was already passed...`);
   };
 
   useEffect(() => {
     startupactions();
-    const isConsent = getCookieConsentValue();
+    const isConsent = getCookieConsentValue() ?? false;
+    console.log(`App_UseEffect: Consent ` + isConsent);
     if (isConsent === false) {
       handleDeclineCookie();
+    } else {
+      handleAcceptCookie();
     }
   }, []);
 
@@ -206,10 +222,6 @@ function App() {
         <Route
           path="/google-analytics-and-react/home"
           element={<HomeComponent />}
-        />
-        <Route
-          path="/google-analytics-and-react/logs"
-          element={<LogComponents />}
         />
         <Route
           path="/google-analytics-and-react/references"

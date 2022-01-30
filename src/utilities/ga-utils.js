@@ -1,4 +1,4 @@
-// Get that analytics vitals reported mate...
+// TODO
 
 import ReactGA from "react-ga";
 
@@ -7,24 +7,23 @@ export const initGA = () => {
     [
       {
         trackingId: process.env.REACT_APP_GOOGLE_ANALYTICS_UA_ID,
-        gaOptions: { siteSpeedSampleRate: 100 },
-      },
-      {
-        trackingId: process.env.REACT_APP_GOOGLE_ANALYTICS_GA4_ID,
-        gaOptions: { siteSpeedSampleRate: 100 },
+        gaOptions: {
+          cookieFlags: "SameSite=None;Secure",
+        },
       },
     ],
-    { debug: true, alwaysSendToDefaultTracker: false }
+    {
+      // debug: true,
+      alwaysSendToDefaultTracker: false,
+    }
   );
 };
 
-export const sendToGoogleAnalytics = ({ id, name, value }) => {
-  // Assumes ID is a string and valid google analytics ID.
-  ReactGA.ga("send", "event", {
-    eventCategory: "Web Vitals",
-    eventAction: name,
-    eventValue: Math.round(name === "CLS" ? value * 1000 : value), // values must be integers
-    eventLabel: id, // id unique to current page load
-    nonInteraction: true, // avoids affecting bounce rate
-  });
+export const pageViewGA = (page) => {
+  console.log("pageViewGA: Starting with page " + page);
+  ReactGA.set({ page });
+  console.log("pageViewGA: reactGA.set complete ");
+  ReactGA.pageview(page);
+  console.log("pageViewGA: reactGA.pageview complete ");
+  console.log("pageViewGA: exiting");
 };
