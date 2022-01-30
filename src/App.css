@@ -5,7 +5,6 @@
   flex-direction: column;
 } */
 
-
 body > #root > div {
   height: 100vh;
 }
@@ -15,7 +14,6 @@ body > #root > div {
   background-color: #2b2a33;
   color: rgb(254, 252, 251);
 }
-
 
 a:visited {
   color: #03cfef;
@@ -60,7 +58,6 @@ a:hover {
 
 .App-link {
   color: #61dafb;
-  
 }
 
 @keyframes App-logo-spin {
@@ -73,7 +70,7 @@ a:hover {
 }
 
 .App-console {
-  background-color: '#242424';
+  background-color: "#242424";
   text-align: left;
   align-self: center;
   margin-bottom: 3rem;
@@ -82,5 +79,5 @@ a:hover {
 }
 
 List-div {
-  text-align: left
+  text-align: left;
 }

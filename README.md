@@ -15,6 +15,7 @@ This project is a workthrough of various tutorials to get basic elements of Goog
 ## Key Links
 * This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 * Analytics enablement from [this blog post](https://dev.to/ramonak/react-enable-google-analytics-after-a-user-grants-consent-5bg3) by Kate Lupachova
+* Better implemenation by react-ga community [juliaqiuxy](https://github.com/juliaqiuxy) with the component [React-Router-v4-withTracker](https://github.com/react-ga/react-ga/wiki/React-Router-v4-withTracker) 
 * Bundle Size Explorer from [Facebook](https://create-react-app.dev/docs/analyzing-the-bundle-size/)
 * [React Cookie Consent](https://github.com/Mastermindzh/react-cookie-consent)
 

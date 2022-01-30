@@ -1,23 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from "react-router-dom";
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom"; //only get what you need
+import "./index.css";
+import App from "./App";
 
-const rootElement = document.getElementById("root"); 
-//Stripping this out to a constant to make the render more readable
+// Keep your root element a constant to improve readability
+const rootElement = document.getElementById("root");
 
 ReactDOM.render(
-  
   <React.StrictMode>
-    <BrowserRouter> 
-    {/*
-    Browser Router is required for react-router-dom.
-    Wrapping App with this is required for routing to work. 
-    */}
+    <BrowserRouter>
+      {" "}
+      {/*react-router-dom requires wrapping App with this for routing*/}
       <App />
     </BrowserRouter>
   </React.StrictMode>,
-  
   rootElement
 );
