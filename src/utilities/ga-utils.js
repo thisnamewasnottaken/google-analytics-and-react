@@ -1,3 +1,5 @@
+// Get that analytics vitals reported mate...
+
 import ReactGA from "react-ga";
 
 export const initGA = () => {
@@ -8,7 +10,7 @@ export const initGA = () => {
         gaOptions: { siteSpeedSampleRate: 100 },
       },
       {
-        trackingId: "G-57Q396C1V0",
+        trackingId: process.env.REACT_APP_GOOGLE_ANALYTICS_GA4_ID,
         gaOptions: { siteSpeedSampleRate: 100 },
       },
     ],

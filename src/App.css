@@ -5,13 +5,18 @@
   flex-direction: column;
 } */
 
+body {
+  background-color: #282c34;
+}
+
 body > #root > div {
   height: 100vh;
+  background-color: #282c34;
 }
 
 .App {
   text-align: center;
-  background-color: #2b2a33;
+  background-color: #282c34;
   color: rgb(254, 252, 251);
 }
 
@@ -47,12 +52,12 @@ a:hover {
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
-  color: #2b2a33;
+  color: #282c34;
   justify-content: center;
 }
 
 .App-header-logo-box {
-  background-color: #2b2a33;
+  background-color: #282c34;
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -69,7 +74,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #2b2a33;
 }
 
 .App-link {

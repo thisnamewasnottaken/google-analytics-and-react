@@ -3,7 +3,6 @@
 // Fix logging to work from root and pass to logger component
 
 import "./App.css";
-import bootstrap from "bootstrap";
 import React, { useState, useEffect } from "react";
 //import reportWebVitals from "./reportWebVitals";
 import { Console, Hook, Unhook } from "console-feed";
@@ -120,15 +119,6 @@ function ReferencesComponent() {
               web-vitals by GoogleChrome
             </a>
           </li>
-          <li>
-            <a
-              href="https://www.npmjs.com/package/console-feed"
-              target="_blank"
-              rel="noreferrer"
-            >
-              console-feed by samdenty
-            </a>
-          </li>
           <p>Blog</p>
           <li>
             <a
@@ -145,61 +135,68 @@ function ReferencesComponent() {
   );
 }
 
-function App() {
-  const [logs, setLogs] = useState([]);
-
-  console.log(`Hello world!`);
-  console.log(
-    `The analytics ID to use is ` + process.env.REACT_APP_GOOGLE_ANALYTICS_UA_ID
+// Body for the Logo Box
+function LogoBox() {
+  return (
+    <div className="App-header-logo-box">
+      {/* Fun Fact: Anything in the public folder can be referenced using the process env. 
+        Reduces 404 fun. */}
+      <img
+        className="App-logo"
+        src={process.env.PUBLIC_URL + "/Assets/google_analytics-icon.svg"}
+        alt="Google Analytics Logo"
+      />
+      <img
+        className="App-logo-spin"
+        src={process.env.PUBLIC_URL + "/Assets/logo.svg"}
+        alt="React Logo"
+      />
+      <img
+        className="App-logo"
+        src={process.env.PUBLIC_URL + "/Assets/google-lighthouse.svg"}
+        alt="Google Lighthouse Logo"
+      />
+      <img
+        className="App-logo"
+        src={process.env.PUBLIC_URL + "/Assets/github-icon.svg"}
+        alt="Github Logo"
+      />
+    </div>
   );
-  console.log(`Checking if consent was already passed...`);
+}
+
+function App() {
+  const startupactions = () => {
+    console.log(`Hello world!`);
+    console.log(
+      `The analytics ID to use is ` +
+        process.env.REACT_APP_GOOGLE_ANALYTICS_UA_ID
+    );
+    console.log(`Checking if consent was already passed...`);
+  };
 
   useEffect(() => {
+    startupactions();
     const isConsent = getCookieConsentValue();
     if (isConsent === false) {
       handleDeclineCookie();
     }
-    Hook(
-      window.console,
-      (log) => setLogs((currLogs) => [...currLogs, log]),
-      false
-    );
-    return () => Unhook(window.console);
   }, []);
 
   return (
     <div className="App container">
-      <div className="App-header-logo-box">
-        {/* Fun Fact: Anything in the public folder can be referenced using the process env. 
-        Reduces 404 fun. */}
-        <img
-          className="App-logo"
-          src={process.env.PUBLIC_URL + "/Assets/google_analytics-icon.svg"}
-          alt="Google Analytics Logo"
-        />
-        <img
-          className="App-logo-spin"
-          src={process.env.PUBLIC_URL + "/Assets/logo.svg"}
-          alt="React Logo"
-        />
-        <img
-          className="App-logo"
-          src={process.env.PUBLIC_URL + "/Assets/google-lighthouse.svg"}
-          alt="Google Lighthouse Logo"
-        />
-        <img
-          //className="App-logo"
-          src={process.env.PUBLIC_URL + "/Assets/github-icon.svg"}
-          alt="Github Logo"
-        />
-      </div>
-
       <h1>Google Analytics and React Toy</h1>
+      <h2>
+        <i>It forgets you on purpose...</i>
+      </h2>
+
       <nav style={{ padding: "1rem 0" }}>
         <Link to="/google-analytics-and-react/home">Home</Link> | {""}
-        <Link to="/google-analytics-and-react/logs">Logs</Link> | {""}
         <Link to="/google-analytics-and-react/references">References</Link>
       </nav>
+      <p></p>
+      <LogoBox />
+      <p></p>
       <Routes>
         <Route path="/" element={<HomeComponent />}></Route>
         <Route
@@ -221,7 +218,7 @@ function App() {
       </Routes>
       <CookieConsent
         onAccept={handleAcceptCookie}
-        //debug={true} //Uncomment during development.
+        debug={true} //Uncomment during development or constant cookie presence.
         enableDeclineButton
         declineButtonText="Decline Optional Cookies"
         onDecline={handleDeclineCookie}
