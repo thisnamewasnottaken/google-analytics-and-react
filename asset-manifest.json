@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/google-analytics-and-react/static/css/main.3dada192.css",
-    "main.js": "/google-analytics-and-react/static/js/main.d31c8b33.js",
+    "main.css": "/google-analytics-and-react/static/css/main.d5f7847e.css",
+    "main.js": "/google-analytics-and-react/static/js/main.48699915.js",
     "index.html": "/google-analytics-and-react/index.html",
-    "main.3dada192.css.map": "/google-analytics-and-react/static/css/main.3dada192.css.map",
-    "main.d31c8b33.js.map": "/google-analytics-and-react/static/js/main.d31c8b33.js.map"
+    "main.d5f7847e.css.map": "/google-analytics-and-react/static/css/main.d5f7847e.css.map",
+    "main.48699915.js.map": "/google-analytics-and-react/static/js/main.48699915.js.map"
   },
   "entrypoints": [
-    "static/css/main.3dada192.css",
-    "static/js/main.d31c8b33.js"
+    "static/css/main.d5f7847e.css",
+    "static/js/main.48699915.js"
   ]
 }
