@@ -19,7 +19,7 @@ const handleAcceptCookie = () => {
   console.log("handleAcceptCookie triggered");
   initGA();
 };
-// eslint-disable-next-line
+
 const handleDeclineCookie = () => {
   // Remove Google Analytics Cookies on decline
   Cookies.remove("_ga");
@@ -27,6 +27,8 @@ const handleDeclineCookie = () => {
   Cookies.remove("_gid");
 };
 
+// Body for the /logs page
+// Uses a console-feed component
 function LogComponents() {
   const [logs, setLogs] = useState([]);
   console.log(`Log Component is Selected`);
@@ -83,6 +85,8 @@ function HomeComponent() {
   );
 }
 
+// Body for the /references page
+// Uses a console-feed component
 function ReferencesComponent() {
   console.log(`Reference Component is Selected`);
   return (
@@ -183,19 +187,31 @@ function App() {
         </a>
       </h1>
       <nav style={{ padding: "1rem 0" }}>
-        <Link to="/home">Home</Link> | {""}
-        <Link to="/logs">Logs</Link> | {""}
-        <Link to="/references">References</Link>
+        <Link to="/google-analytics-and-react/home">Home</Link> | {""}
+        <Link to="/google-analytics-and-react/logs">Logs</Link> | {""}
+        <Link to="/google-analytics-and-react/references">References</Link>
       </nav>
       <Routes>
+        <Route
+          path="/"
+          element={<HomeComponent />}
+        ></Route>
         <Route
           path="/google-analytics-and-react"
           element={<HomeComponent />}
         ></Route>
-        <Route path="/" element={<HomeComponent />}></Route>
-        <Route path="/home" element={<HomeComponent />} />
-        <Route path="/logs" element={<LogComponents />} />
-        <Route path="/references" element={<ReferencesComponent />} />
+        <Route
+          path="/google-analytics-and-react/home"
+          element={<HomeComponent />}
+        />
+        <Route
+          path="/google-analytics-and-react/logs"
+          element={<LogComponents />}
+        />
+        <Route
+          path="/google-analytics-and-react/references"
+          element={<ReferencesComponent />}
+        />
       </Routes>
       <CookieConsent
         onAccept={handleAcceptCookie}
