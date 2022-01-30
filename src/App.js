@@ -2,7 +2,6 @@
 // Write unit test cases.
 // Fix logging to work from root and pass to logger component
 
-import logo from "./logo.svg";
 import "./App.css";
 import React, { useState, useEffect } from "react";
 //import reportWebVitals from "./reportWebVitals";
@@ -55,14 +54,17 @@ function HomeComponent() {
   console.log(`Home Component is Rendering`);
   return (
     <div className="AppContainer">
-      <img
-        src="https://github.com/thisnamewasnottaken/google-analytics-and-react/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages"
-        alt="Github Pages Workflow Status badge"
-      />
-      <img
-        src="https://github.com/thisnamewasnottaken/google-analytics-and-react/actions/workflows/codeql-analysis.yml/badge.svg"
-        alt="Github CodeQL Status badge"
-      />
+      <div className="App-header-logo-box">
+        <img
+          src="https://github.com/thisnamewasnottaken/google-analytics-and-react/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages"
+          alt="Github Pages Workflow Status badge"
+        />
+        <img
+          src="https://github.com/thisnamewasnottaken/google-analytics-and-react/actions/workflows/codeql-analysis.yml/badge.svg"
+          alt="Github CodeQL Status badge"
+        />
+      </div>
+
       <p style={{ textAlign: "center" }}>
         Basic Toy to try out Google Analytics with React. Based on mostly boiler
         code from a number of sources.
@@ -76,9 +78,9 @@ function HomeComponent() {
         reportWebVitals.js file by default.
       </p>
       <p>
-        See the code here:{" "}
+        Source code at:{" "}
         <a href="https://github.com/thisnamewasnottaken/google-analytics-and-react">
-          https://github.com/thisnamewasnottaken/google-analytics-and-react
+          github > thisnamewasnottaken > google-analytics-and-react
         </a>
       </p>
     </div>
@@ -180,10 +182,34 @@ function App() {
 
   return (
     <div className="App container">
-      <img className="App-logo" src={logo} alt="logo" />
+      <div className="App-header-logo-box">
+        {/* Fun Fact: Anything in the public folder can be referenced using the process env. 
+        Reduces 404 fun. */}
+        <img
+          className="App-logo"
+          src={process.env.PUBLIC_URL + "/Assets/google_analytics-icon.svg"}
+          alt="Google Analytics Logo"
+        />
+        <img
+          className="App-logo-spin"
+          src={process.env.PUBLIC_URL + "/Assets/logo.svg"}
+          alt="React Logo"
+        />
+        <img
+          className="App-logo"
+          src={process.env.PUBLIC_URL + "/Assets/google-lighthouse.svg"}
+          alt="Google Lighthouse Logo"
+        />
+        <img
+          className="App-logo"
+          src={process.env.PUBLIC_URL + "/Assets/github-icon.svg"}
+          alt="Github Logo"
+        />
+      </div>
+
       <h1>
         <a href="https://thisnamewasnottaken.github.io/google-analytics-and-react/">
-          Google Analytics Toy
+          Google Analytics and React Toy
         </a>
       </h1>
       <nav style={{ padding: "1rem 0" }}>
